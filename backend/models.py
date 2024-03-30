@@ -37,26 +37,36 @@ class User(AbstractUser):
         return self.name
 
 class Type(models.Model):
-    type = models.CharField(max_length=150)
+    type = models.CharField(max_length=150,unique = True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.type
+
+
 class Category(models.Model):
-    category = models.CharField(max_length=150)
+    category = models.CharField(max_length=150,unique = True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.category
 
 
 class Teacher(models.Model):
-    teacher = models.OneToOneField(User, on_delete=models.CASCADE, related_name='teacher_profile')
+    teacher = models.OneToOneField(User, on_delete=models.CASCADE, related_name='teacher_profile', unique = True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.teacher
 
 
 
 
 class Course(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255,unique = True)
     course_type = models.ForeignKey(Type, on_delete= models.CASCADE, name = "course_type")
     medium = models.CharField(max_length = 150)
     fee = models.IntegerField(null = True)
@@ -69,12 +79,17 @@ class Course(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.title
+
 
 class CourseAssignToTeacher(models.Model):
     course = models.ForeignKey(Course, on_delete= models.CASCADE, name = "course")
     teacher = models.ForeignKey(Teacher, on_delete= models.CASCADE, name ="teacher")
     assignedDate = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
+
+
 
 class PurchasedCourse(models.Model):
     course = models.ForeignKey(Course, on_delete= models.CASCADE, name= "course")
@@ -89,6 +104,7 @@ class PurchasedCourse(models.Model):
             self.expireDate = self.purchasedDate + timedelta(days=self.validity * 365)  
         super().save(*args, **kwargs)
  
+    
 
 
     
