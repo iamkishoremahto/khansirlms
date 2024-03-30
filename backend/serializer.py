@@ -32,5 +32,40 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
     
+class TypeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Type
+        fields = "__all__"
+
+class CategorySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Category
+        fields = "__all__"
+
+class TeacherSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Teacher
+        fields = "__all__"
+    
+class CourseSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Course
+        fields = "__all__"
+
+class CourseAssignToTeacherSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = CourseAssignToTeacher
+        fields = "__all__"
+
+class PurchasedCourseSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PurchasedCourse
+        fields = "__all__"
 
 
