@@ -1,9 +1,10 @@
 import React from 'react'
-import './index.css'
+
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Layout from '../layout/Layout.jsx'
-import Login from '../pages/Login.jsx'
+import Layout from './layout/Layout.jsx'
+import Login from './pages/Login.jsx'
+import './index.css';
 
 const router = createBrowserRouter([
   {
