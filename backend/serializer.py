@@ -25,6 +25,11 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.create(**validated_data)
         user.set_password(validated_data["password"])
         user.save()
+        
+        if user.is_teacher:
+            teacher = Teacher.objects.create(teacher = user)
+            teacher.save()
+
         return user
     
     def update(self,instance, validated_data):

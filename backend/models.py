@@ -55,12 +55,15 @@ class Category(models.Model):
 
 
 class Teacher(models.Model):
+    
     teacher = models.OneToOneField(User, on_delete=models.CASCADE, related_name='teacher_profile', unique = True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.teacher
+        return self.teacher.name
+
+    
 
 
 

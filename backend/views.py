@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 from .serializer import *
 from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated, IsAdminUser,IsAuthenticatedOrReadOnly
 
 
 class UserRetrieveCreate(generics.ListCreateAPIView):
@@ -11,10 +12,12 @@ class UserRetrieveCreate(generics.ListCreateAPIView):
 
 class TypeRetrieveCreate(generics.ListCreateAPIView):
 
+    permission_classes = [IsAdminUser]
     queryset = Type.objects.all()
     serializer_class = TypeSerializer
 
 class TypeRetrieveUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
+    
     queryset = Type.objects.all()
     serializer_class = TypeSerializer
 
@@ -24,6 +27,7 @@ class CategoryRetrieveCreate(generics.ListCreateAPIView):
     serializer_class = CategorySerializer
 
 class CategoryRetrieveUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
+
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
