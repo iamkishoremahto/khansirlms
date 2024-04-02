@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { NavLink, useLocation } from 'react-router-dom'
 
 export default function Breadcrumb(props) {

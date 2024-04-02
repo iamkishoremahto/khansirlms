@@ -21,7 +21,7 @@ export default function Login() {
             <Breadcrumb data={{ title: "Login" }} />
             <div className="loginPage bg-white min-w-full flex items-start p-11 justify-center min-h-[500px] ">
 
-                <div className="loginFormWrapper p-11 grid gap-7 max-w-[750px] shadow-shadow-2 rounded-lg">
+                <div className="loginFormWrapper p-11 grid gap-7 max-w-[750px] sm:min-w-[750px] shadow-shadow-2 rounded-lg">
                     <h1 className="  w-full text-center text-2xl ">Login to access the courses and materials</h1>
                     <form id="login min-w-full">
                         <div className="inputsWrapper grid gap-5">
@@ -53,7 +53,7 @@ export default function Login() {
                             </div>
 
                             <div onMouseEnter={() =>{setFPasswordW('full')}} onMouseLeave={() =>{setFPasswordW('0')}}   className="forgetPassword">
-                                <Link to="/forget-password" className=" text-purple-950 hover:text-blue-900 transition-all">Lost your password?</Link>
+                                <Link to="/forgot-password" className=" text-purple-950 hover:text-blue-900 transition-all">Lost your password?</Link>
                                 <div className={`w-${fPasswordW} transition-all h-[2px] rounded-3xl bg-blue-800  `}></div>
                             </div>
                         </div>

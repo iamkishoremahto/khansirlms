@@ -14,6 +14,7 @@ import Downloads from './pages/Downloads.jsx'
 import AnswerWriting from './pages/AnswerWriting.jsx'
 import OpenTest from './pages/OpenTest.jsx'
 import Register from './pages/Register.jsx'
+import ForgotPassword from './pages/ForgotPassword.jsx'
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path:"sign-up/",
         element:<Register/>
+      },
+      {
+        path:'forgot-password/',
+        element:<ForgotPassword/>
       }
     ]
   }
