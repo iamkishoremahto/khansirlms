@@ -13,6 +13,7 @@ import Practice from './pages/Practice.jsx'
 import Downloads from './pages/Downloads.jsx'
 import AnswerWriting from './pages/AnswerWriting.jsx'
 import OpenTest from './pages/OpenTest.jsx'
+import Register from './pages/Register.jsx'
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
         path:"login/",
         element:<Login/>
       },
+      {
+        path:"sign-up/",
+        element:<Register/>
+      }
     ]
   }
 ])
