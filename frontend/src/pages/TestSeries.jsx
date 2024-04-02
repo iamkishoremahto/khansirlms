@@ -1,9 +1,12 @@
+import { Helmet } from "react-helmet";
 
-import React from 'react';
-
-function TestSeries(props) {
+function TestSeries() {
     return (
         <>
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>Test Series | KGS</title>
+        </Helmet>
             Testseries
         </>
     );

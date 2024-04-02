@@ -24,28 +24,28 @@ function Header(props) {
                     <div className="menu hidden lg:block">
                         <ul className=' flex lg:gap-4 2xl:gap-8'>
                             <div>
-                                <Menu key={1} data={{ url: "/Home", label: "Home" }} />
+                                <Menu key={1} data={{ url: "/", label: "Home" }} />
                             </div>
                             <div className='flex justify-center items-center gap-1'>
-                                <Menu key={2} data={{ url: "/Courses", label: "Courses" }} /><MdKeyboardArrowDown />
+                                <Menu key={2} data={{ url: "/courses", label: "Courses" }} /><MdKeyboardArrowDown />
                             </div>
                             <div className='flex justify-center items-center gap-1'>
-                                <Menu key={3} data={{ url: "/TestSeries", label: "Test Series" }} />
+                                <Menu key={3} data={{ url: "/test-series", label: "Test Series" }} />
                             </div>
                             <div className='flex justify-center items-center gap-1'>
-                                <Menu key={4} data={{ url: "/CurrentAffairs", label: "Current Affairs" }} /><MdKeyboardArrowDown />
+                                <Menu key={4} data={{ url: "/current-affairs", label: "Current Affairs" }} /><MdKeyboardArrowDown />
                             </div>
                             <div className='flex justify-center items-center gap-1'>
-                                <Menu key={5} data={{ url: "/Practice", label: "Practice" }} /><MdKeyboardArrowDown />
+                                <Menu key={5} data={{ url: "/practice", label: "Practice" }} /><MdKeyboardArrowDown />
                             </div>
                             <div className='flex justify-center items-center gap-1'>
-                                <Menu key={6} data={{ url: "/Downloads", label: "Downloads" }} /><MdKeyboardArrowDown />
+                                <Menu key={6} data={{ url: "/downloads", label: "Downloads" }} /><MdKeyboardArrowDown />
                             </div>
                             <div className='flex justify-center items-center gap-1'>
-                                <Menu key={7} data={{ url: "/AnswerWriting", label: "Answer Writing" }} /><MdKeyboardArrowDown />
+                                <Menu key={7} data={{ url: "/answer-writing", label: "Answer Writing" }} /><MdKeyboardArrowDown />
                             </div>
                             <div className='flex justify-center items-center gap-1'>
-                                <Menu key={8} data={{ url: "/OpenTest", label: "Open Test" }} />
+                                <Menu key={8} data={{ url: "/open-test", label: "Open Test" }} />
                             </div>
                             <div className='flex justify-center items-center gap-1'>
                                 <Menu key = {9} data = {{url:"/sign-up",label:"Login/Register",extra_css:"text-white bg-[#3e4495] px-4 py-3 rounded-[5px] hover:text-white"}} />

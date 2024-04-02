@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet";
 
-import React from 'react';
-
-function Home(props) {
+function Home() {
     return (
        <>
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home | Welcome To KGS !</title>
+        </Helmet>
+        <p>Home</p>
            
        </>
     );

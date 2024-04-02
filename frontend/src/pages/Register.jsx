@@ -2,12 +2,17 @@ import Breadcrumb from "../componenets/Breadcrumb"
 import InputField from "../componenets/InputField"
 import SubmitBtn from "../componenets/SubmitBtn"
 import { Link } from "react-router-dom"
+import {Helmet} from 'react-helmet'
 
 export default function Register() {
 
   
     return (
         <>
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>Sign-Up | KGS</title>
+        </Helmet>
             <Breadcrumb data={{ title: "Join Khan Global Studies" }} />
             <div className="registerPage bg-white min-w-full flex items-start p-11 justify-center min-h-[500px] ">
 

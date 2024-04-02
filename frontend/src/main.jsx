@@ -21,35 +21,35 @@ const router = createBrowserRouter([
     element: <Layout/>,
     children:[
       {
-        path:"Home/",
+        path:"",
         element:<Home/>
       },
       {
-        path:"Courses/",
+        path:"courses/",
         element:<Courses/>
       },
       {
-        path:"TestSeries/",
+        path:"test-series/",
         element:<TestSeries/>
       },
       {
-        path:"CurrentAffairs/",
+        path:"current-affairs/",
         element:<CurrentAffairs/>
       },
       {
-        path:"Practice/",
+        path:"practice/",
         element:<Practice/>
       },
       {
-        path:"Downloads/",
+        path:"downloads/",
         element:<Downloads/>
       },
       {
-        path:"AnswerWriting/",
+        path:"answer-writing/",
         element:<AnswerWriting/>
       },
       {
-        path:"OpenTest/",
+        path:"open-test/",
         element:<OpenTest/>
       },
       {

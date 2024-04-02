@@ -1,9 +1,13 @@
 
-import React from 'react';
+import { Helmet } from "react-helmet";
 
-function Practice(props) {
+function Practice() {
     return (
         <>
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>Practice | KGS</title>
+        </Helmet>
             Practice
         </>
     );

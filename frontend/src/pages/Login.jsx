@@ -1,8 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/no-unknown-property */
 import Breadcrumb from "../componenets/Breadcrumb";
 import InputField from "../componenets/InputField";
 import SubmitBtn from "../componenets/SubmitBtn";
 import { Link } from "react-router-dom";
 import { useState } from 'react'
+import {Helmet} from 'react-helmet'
 
 export default function Login() {
 
@@ -11,6 +14,10 @@ export default function Login() {
 
     return (
         <>
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>Login | KGS</title>
+        </Helmet>
             <Breadcrumb data={{ title: "Login" }} />
             <div className="loginPage bg-white min-w-full flex items-start p-11 justify-center min-h-[500px] ">
 
