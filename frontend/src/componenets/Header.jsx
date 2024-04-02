@@ -48,11 +48,7 @@ function Header(props) {
                                 <Menu key={8} data={{ url: "/OpenTest", label: "Open Test" }} />
                             </div>
                             <div className='flex justify-center items-center gap-1'>
-<<<<<<< HEAD
                                 <Menu key = {9} data = {{url:"/sign-up",label:"Login/Register",extra_css:"text-white bg-[#3e4495] px-4 py-3 rounded-[5px] hover:text-white"}} />
-=======
-                                <Menu key={9} data={{ url: "/login", label: "Login/Register", extra_css: "text-white bg-[#3e4495] px-4 py-3 rounded-[5px] hover:text-white" }} />
->>>>>>> origin/master
                             </div>
                         </ul>
                     </div>

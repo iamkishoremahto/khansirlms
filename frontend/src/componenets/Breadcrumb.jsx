@@ -19,8 +19,8 @@ export default function Breadcrumb() {
                 return <div key={index} className="breadcrumbs px-1 ">
              
                             <NavLink className={({ isActive }) => (
-                              `${isActive ? 'font-bold' : ''} capitalize`
-                            )} to={current_link}>{link === '' ? "" : <span className=' font-normal'> / </span>}{link === '' ? "home" : link.replace('-', ' ')}</NavLink>
+                              `${isActive ? 'font-bold text-black' : ' text-gray-500'} capitalize`
+                            )} to={current_link}>{link === '' ? "" : <span className=' font-normal text-gray-500'> / </span>}{link === '' ? "home" : link.replace('-', ' ')}</NavLink>
                       </div>
               })
             }
