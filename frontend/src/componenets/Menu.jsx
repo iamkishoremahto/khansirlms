@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Menu(props) {
     return (

@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 
-import React from 'react';
+
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Menu from './Menu'
 import { HiMenu } from "react-icons/hi";

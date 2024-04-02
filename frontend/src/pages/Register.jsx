@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Breadcrumb from "../componenets/Breadcrumb"
 import InputField from "../componenets/InputField"
 import SubmitBtn from "../componenets/SubmitBtn"
@@ -16,7 +17,7 @@ export default function Register() {
             <Breadcrumb data={{ title: "Join Khan Global Studies" }} />
             <div className="registerPage bg-white min-w-full flex items-start p-11 justify-center min-h-[500px] ">
 
-                <div className="registerFormWrapper p-11 grid gap-3 max-w-[750px] shadow-shadow-2 rounded-lg">
+                <div className="registerFormWrapper p-11 grid gap-3 max-w-[750px] sm:min-w-[750px] shadow-shadow-2 rounded-lg">
                     <h1 className="  w-full text-center text-2xl ">Enroll now to learn LIVE Online from India's best teachers</h1>
                     <form id="register min-w-full">
                         <div className="inputsWrapper grid gap-5">
