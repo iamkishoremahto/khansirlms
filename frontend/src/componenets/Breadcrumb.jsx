@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom'
 
-export default function Breadcrumb() {
+export default function Breadcrumb(props) {
 
   let location = useLocation().pathname.split('/');
   let current_link = ''
@@ -26,7 +26,7 @@ export default function Breadcrumb() {
             }
           </div>
           <div className="breadcrumbTitile">
-            <h1 className='text-center text-3xl font-bold'>Register</h1>
+            <h1 className='text-center text-3xl font-bold'>{props.data.title}</h1>
           </div>
         </div>
       </div>
