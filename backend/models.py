@@ -85,6 +85,11 @@ class Course(models.Model):
     def __str__(self):
         return self.title
 
+class CourseVideos(models.Model):
+    course = models.ForeignKey(Course, on_delete= models.CASCADE)
+    video = models.URLField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class CourseAssignToTeacher(models.Model):
     course = models.ForeignKey(Course, on_delete= models.CASCADE, name = "course")
