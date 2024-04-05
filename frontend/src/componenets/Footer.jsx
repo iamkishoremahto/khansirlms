@@ -56,7 +56,7 @@ function Footer(props) {
                             <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>FAQs</li>
                             <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Ask Doubts</li>
                         </ul>
-                    </div>
+                    </div> 
                     <div className="third lg:mx-[-10px]">
                         <ul className='flex flex-col gap-4 p-2'>
                             <h1 className='font-bold text-[1.1em]'>Links</h1>
