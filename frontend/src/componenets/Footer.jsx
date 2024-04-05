@@ -1,11 +1,11 @@
 
-import React from 'react';
+
 import { PiInstagramLogoDuotone } from "react-icons/pi";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineMail } from "react-icons/ai";
-import { FaInstagram, FaFacebookF, FaLinkedin, FaTelegramPlane, FaYoutube, FaTwitter } from "react-icons/fa";
+import {  FaFacebookF, FaLinkedin, FaTelegramPlane, FaYoutube, FaTwitter } from "react-icons/fa";
 
-function Footer(props) {
+function Footer() {
     return (
         <>
             <div className="footermain lg:flex lg:justify-center lg:items-center bg-[#100f1f] text-white min-h-[600px]">

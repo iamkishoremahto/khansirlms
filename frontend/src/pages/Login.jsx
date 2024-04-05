@@ -3,14 +3,58 @@
 import Breadcrumb from "../componenets/Breadcrumb";
 import InputField from "../componenets/InputField";
 import SubmitBtn from "../componenets/SubmitBtn";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from 'react'
 import {Helmet} from 'react-helmet'
+import { useLocalStorage } from '../hooks/useLocalStorage'
+import { useUser } from '../hooks/useUser'
+import {jwtDecode} from 'jwt-decode';
 
 export default function Login() {
+    
+    const {setAccessToken,setRefreshToken, getAccessToken, getRefreshToken} = useLocalStorage();
+    const { getUser } =useUser();
+    
+    
+    const navigate = useNavigate()
 
     const [fPasswordW, setFPasswordW] = useState('0')
+    const [loading,setLoading] = useState(false)
+    const baseUrl = 'http://127.0.0.1:8000/api/'
 
+    const loginHandler = async (e) =>{
+            e.preventDefault()
+            const loginForm = new FormData(e.target);
+            const data = Object()
+            loginForm.forEach((value,key) =>{
+                data[key] = value;
+            })
+         
+        try{
+            const response = await fetch(baseUrl + 'token/',{
+                method: 'POST',
+                headers:{
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data)
+            })
+            const tokens = await response.json()
+            setAccessToken(tokens.access)
+            setRefreshToken(tokens.refresh)
+            let userData =  getUser()
+            console.log(jwtDecode(getAccessToken()))
+            
+            if(response.ok) {
+                navigate('/dashboard')
+            }
+            
+       
+            
+        }catch(err){
+            console.log(err)
+        }
+        
+    }
 
     return (
         <>
@@ -18,12 +62,13 @@ export default function Login() {
                 <meta charSet="utf-8" />
                 <title>Login | KGS</title>
         </Helmet>
+
             <Breadcrumb data={{ title: "Login" }} />
             <div className="loginPage bg-white min-w-full flex items-start p-11 justify-center min-h-[500px] ">
 
                 <div className="loginFormWrapper p-11 grid gap-7 max-w-[750px] sm:min-w-[750px] shadow-shadow-2 rounded-lg">
                     <h1 className="  w-full text-center text-2xl ">Login to access the courses and materials</h1>
-                    <form id="login min-w-full">
+                    <form id="login min-w-full" onSubmit={loginHandler}>
                         <div className="inputsWrapper grid gap-5">
 
                             <InputField data={{ label: "Email", name: "email", type: "email", placeholder: "Email" }} />

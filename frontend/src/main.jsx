@@ -15,6 +15,7 @@ import AnswerWriting from './pages/AnswerWriting.jsx'
 import OpenTest from './pages/OpenTest.jsx'
 import Register from './pages/Register.jsx'
 import ForgotPassword from './pages/ForgotPassword.jsx'
+import Dashboard from './pages/Dashboard.jsx'
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path:'forgot-password/',
         element:<ForgotPassword/>
+      },
+      {
+        path:'dashboard/',
+        element:<Dashboard/>
       }
     ]
   }
