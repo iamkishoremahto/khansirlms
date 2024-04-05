@@ -8,9 +8,9 @@ import { FaInstagram, FaFacebookF, FaLinkedin, FaTelegramPlane, FaYoutube, FaTwi
 function Footer(props) {
     return (
         <>
-            <div className="footermain flex justify-center items-center bg-[#100f1f] text-white min-h-[600px]">
-                <div className="container grid grid-cols-4 px-20">
-                    <div className="first flex flex-col gap-2 w-[400px] ">
+            <div className="footermain lg:flex lg:justify-center lg:items-center bg-[#100f1f] text-white min-h-[600px]">
+                <div className="container lg:grid lg:grid-cols-4 p-2 lg:px-20">
+                    <div className="first flex flex-col gap-2 lg:w-[400px] ">
                         <div className="logo p-1">
                             <img src="/images/kgs.png" className=' h-40' alt="" />
                         </div>
@@ -23,8 +23,8 @@ function Footer(props) {
                                     <img src="/images/playstore.png" alt="" />
                                 </div>
                                 <div>
-                                    <div>GET IT ON</div>
-                                    <div className=' font-extrabold'>Google Pay</div>
+                                    <div className='text-[0.9em]'>GET IT ON</div>
+                                    <div className='text-[0.9em] font-extrabold'>Google Pay</div>
                                 </div>
                             </div>
                             <div className="appstore flex bg-[#021f35] pr-4 py-2 rounded-[5px]">
@@ -32,8 +32,8 @@ function Footer(props) {
                                     <img src="/images/applestore.png" alt="" />
                                 </div>
                                 <div>
-                                    <div>GET IT ON</div>
-                                    <div className=' font-extrabold'>App Store</div>
+                                    <div className='text-[0.9em]'>GET IT ON</div>
+                                    <div className='text-[0.9em] font-extrabold'>App Store</div>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@ function Footer(props) {
                             <div className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 telegram"><FaTelegramPlane /></div>
                         </div>
                     </div>
-                    <div className="second ml-32">
+                    <div className="second lg:ml-32">
                         <ul className=' flex flex-col gap-4 p-2'>
                             <h1 className='transition-all duration-500 ease-in-out cursor-pointer font-bold text-[1.1em]'>Explore</h1>
                             <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Blog</li>
@@ -57,7 +57,7 @@ function Footer(props) {
                             <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Ask Doubts</li>
                         </ul>
                     </div>
-                    <div className="third mx-[-10px]">
+                    <div className="third lg:mx-[-10px]">
                         <ul className='flex flex-col gap-4 p-2'>
                             <h1 className='font-bold text-[1.1em]'>Links</h1>
                             <li className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>All Courses</li>
@@ -68,7 +68,7 @@ function Footer(props) {
                             <li className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Feedback Form</li>
                         </ul>
                     </div>
-                    <div className=' flex flex-col gap-4 ml-[-120px]'>
+                    <div className=' flex flex-col gap-4 lg:ml-[-120px]'>
                         <h1 className='font-bold text-[1.1em] '>Address</h1>
                         <div className=' flex justify-center'>
                             <div>
