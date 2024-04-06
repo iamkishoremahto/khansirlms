@@ -7,7 +7,7 @@ function Layout(){
     return(
         <>
             <div className="main">
-                <div className="header">
+                <div className="header sticky top-0 bg-white">
                    <Header/>
                 </div>
                 <div className="outlet_section">
@@ -16,6 +16,7 @@ function Layout(){
                 <div className="footer">
                     <Footer/>
                 </div>
+                
             </div>
         </>
     );

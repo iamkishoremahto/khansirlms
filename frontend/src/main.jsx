@@ -16,6 +16,16 @@ import OpenTest from './pages/OpenTest.jsx'
 import Register from './pages/Register.jsx'
 import ForgotPassword from './pages/ForgotPassword.jsx'
 import Dashboard from './pages/Dashboard.jsx'
+import DashboardOutlet from './pages/sub_component/DashboardOutlet.jsx'
+import MyCourse from './pages/sub_component/MyCourse.jsx'
+import MyTestSeries from './pages/sub_component/MyTestSeries.jsx'
+import LiveClasses from './pages/sub_component/LiveClasses.jsx'
+import MySubmission from './pages/sub_component/MySubmission.jsx'
+import AskedDoubts from './pages/sub_component/AskedDoubts.jsx'
+import Orders from './pages/sub_component/Orders.jsx'
+import MyProfile from './pages/sub_component/MyProfile.jsx'
+import AllCourses from './pages/AllCourses.jsx'
+import AskDoubts from './pages/AskDoubts.jsx'
 
 const router = createBrowserRouter([
   {
@@ -68,7 +78,50 @@ const router = createBrowserRouter([
       },
       {
         path:'dashboard/',
-        element:<Dashboard/>
+        element:<Dashboard/>,
+        children:[
+          {
+            path:"",
+            element:<DashboardOutlet />
+          },
+          {
+            path:"my-course/",
+            element:<MyCourse />
+          },
+          {
+            path:"my-test-series/",
+            element:<MyTestSeries />
+          },
+          {
+            path:"live-classes/",
+            element:<LiveClasses />
+          },
+          {
+            path:"my-submission/",
+            element:<MySubmission />
+          },
+          {
+            path:"asked-doubts/",
+            element:<AskedDoubts />
+          },
+          {
+            path:"orders/",
+            element:<Orders />
+          },
+          {
+            path:"my-profile/",
+            element:<MyProfile />
+          }
+        ]
+
+      },
+      {
+        path:"all-courses/",
+        element:<AllCourses/>
+      },
+      {
+        path:"ask-doubts/",
+        element:<AskDoubts/>
       }
     ]
   }
