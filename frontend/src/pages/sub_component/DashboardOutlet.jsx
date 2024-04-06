@@ -3,12 +3,15 @@ import React from 'react';
 
 function DashboardOutlet(props) {
     return (
-        <div className=' grid min-h-full'>
-           <div className="w-full border-2 min-h-full bg-[url('/images/v915-techi-025-l.jpg')] bg-no-repeat bg-contain">
-            5hnj56h6
-           </div>
+        <div className=' flex justify-center min-h-[400px]'>
+            <div className=' grid min-h-[400px] w-[1100px]'>
+                <div className=" min-h-[300px] rounded-[35px] bg-gradient-to-tr from-[#0d1773] to-[#090451]  bg-no-repeat bg-contain">
+                    <img src="/images/kgs.png" className=' h-20' alt="" />               
+                </div>
+            </div>
         </div>
     );
 }
 
 export default DashboardOutlet;
+
