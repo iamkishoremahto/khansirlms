@@ -4,6 +4,7 @@ import { PiInstagramLogoDuotone } from "react-icons/pi";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineMail } from "react-icons/ai";
 import {  FaFacebookF, FaLinkedin, FaTelegramPlane, FaYoutube, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
@@ -38,34 +39,34 @@ function Footer() {
                             </div>
                         </div>
                         <div className='flex gap-5 text-xl text-white mt-5'>
-                            <div className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 youtube"><FaYoutube /></div>
-                            <div className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 twitter"><FaTwitter /></div>
-                            <div className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 insta"><PiInstagramLogoDuotone /></div>
-                            <div className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 facebook"><FaFacebookF /></div>
-                            <div className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 linked"><FaLinkedin /></div>
-                            <div className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 telegram"><FaTelegramPlane /></div>
+                            <Link to="#" className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 youtube"><FaYoutube /></Link>
+                            <Link to="#" className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 twitter"><FaTwitter /></Link>
+                            <Link to="#" className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 insta"><PiInstagramLogoDuotone /></Link>
+                            <Link to="#" className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 facebook"><FaFacebookF /></Link>
+                            <Link to="#" className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 linked"><FaLinkedin /></Link>
+                            <Link to="#" className=" hover:bg-blue-600 transition-all ease-in-out duration-500 cursor-pointer bg-[#1e1d2f] rounded-[5px] p-2 telegram"><FaTelegramPlane /></Link>
                         </div>
                     </div>
                     <div className="second lg:ml-32">
+                        <h1 className='transition-all duration-500 ease-in-out cursor-pointer font-bold text-[1.1em]'>Explore</h1>
                         <ul className=' flex flex-col gap-4 p-2'>
-                            <h1 className='transition-all duration-500 ease-in-out cursor-pointer font-bold text-[1.1em]'>Explore</h1>
-                            <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Blog</li>
-                            <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>About Us</li>
-                            <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Contact Us</li>
-                            <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Career</li>
-                            <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>FAQs</li>
-                            <li className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Ask Doubts</li>
+                            <Link to="#" className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Blog</Link>
+                            <Link to="#" className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>About Us</Link>
+                            <Link to="#" className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Contact Us</Link>
+                            <Link to="#" className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Career</Link>
+                            <Link to="#" className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>FAQs</Link>
+                            <Link to="#" className='transition-all duration-500 ease-in-out cursor-pointer hover:text-blue-900 text-[0.9em]'>Ask Doubts</Link>
                         </ul>
                     </div> 
                     <div className="third lg:mx-[-10px]">
+                        <h1 className='font-bold text-[1.1em]'>Links</h1>
                         <ul className='flex flex-col gap-4 p-2'>
-                            <h1 className='font-bold text-[1.1em]'>Links</h1>
-                            <li className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>All Courses</li>
-                            <li className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Exam Syllabus</li>
-                            <li className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Gallery</li>
-                            <li className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Khan Global Studies - <br /> Android App</li>
-                            <li className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Khan Global Studies - IOS <br /> App</li>
-                            <li className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Feedback Form</li>
+                            <Link to="#" className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>All Courses</Link>
+                            <Link to="#" className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Exam Syllabus</Link>
+                            <Link to="#" className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Gallery</Link>
+                            <Link to="#" className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Khan Global Studies - <br /> Android App</Link>
+                            <Link to="#" className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Khan Global Studies - IOS <br /> App</Link>
+                            <Link to="#" className=' cursor-pointer transition-all duration-500 ease-in-out hover:text-blue-900 text-[0.9em]'>Feedback Form</Link>
                         </ul>
                     </div>
                     <div className=' flex flex-col gap-4 lg:ml-[-120px]'>

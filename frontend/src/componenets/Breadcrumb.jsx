@@ -18,19 +18,19 @@ export default function Breadcrumb(props) {
                 current_link += link === '' ? '/' : link
 
                 return <div key={index} className="breadcrumbs px-1 ">
-             
-                            <NavLink className={({ isActive }) => (
-                              `${isActive ? 'font-bold text-black' : ' text-gray-500'} capitalize`
-                            )} to={current_link}>{link === '' ? "" : <span className=' font-normal text-gray-500'> / </span>}{link === '' ? "home" : link.replace('-', ' ')}</NavLink>
-                      </div>
+
+                  <NavLink className={({ isActive }) => (
+                    `${isActive ? 'font-bold text-black' : ' text-gray-500'} capitalize`
+                  )} to={current_link}>{link === '' ? "" : <span className=' font-normal text-gray-500'> / </span>}{link === '' ? "home" : link.replace('-', ' ')}</NavLink>
+                </div>
               })
             }
           </div>
           <div className="breadcrumbTitile">
-            <h1 className='text-center text-3xl font-bold'>{props.data.title}</h1>
+            <h1 className='text-center text-4xl font-bold text-[#021f35]'>{props.data.title}</h1>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
