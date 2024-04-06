@@ -60,6 +60,12 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = "__all__"
+    
+class courseVideoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = CourseVideos
+        fields = '__all__'
 
 class CourseAssignToTeacherSerializer(serializers.ModelSerializer):
 

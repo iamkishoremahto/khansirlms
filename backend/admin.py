@@ -19,11 +19,15 @@ class CourseTable(admin.ModelAdmin):
 
 class CourseAssignToTeacherTable(admin.ModelAdmin):
     list_display = [field.name for field in CourseAssignToTeacher._meta.fields]
+
+class CourseVideosTable(admin.ModelAdmin):
+    list_display = [field.name for field in CourseVideos._meta.fields]
 admin.site.register(User,UserTable)
 admin.site.register(Type,TypeTable)
 admin.site.register(Category,CategoryTable)
 admin.site.register(Teacher,TeacherTable)
 admin.site.register(Course,CourseTable)
 admin.site.register(CourseAssignToTeacher,CourseAssignToTeacherTable)
+admin.site.register(CourseVideos,CourseVideosTable)
 
     

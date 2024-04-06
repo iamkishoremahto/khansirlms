@@ -7,7 +7,7 @@ from .permissions import IsTeacherOrReadOnly,IsAdminOrReadOnly
 
 
 class UserRetrieveCreate(generics.ListCreateAPIView):
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
 
     queryset = User.objects.all()
     serializer_class = UserSerializer
@@ -86,5 +86,9 @@ class PurchasedCourseRetrieveUpdateDelete(generics.RetrieveUpdateDestroyAPIView)
 
     queryset = PurchasedCourse.objects.all()
     serializer_class = PurchasedCourseSerializer
+
+class CourseVideoCreateRetrieveView(generics.CreateAPIView):
+    queryset = CourseVideos.objects.all()
+    serializer_class = courseVideoSerializer
 
     

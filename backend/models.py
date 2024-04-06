@@ -76,7 +76,7 @@ class Course(models.Model):
     discounted_fee = models.IntegerField(null = True)
     is_free = models.BooleanField(default=False)
     thumbnail = models.URLField()
-    duration = models.IntegerField(null = True)
+    duration = models.DurationField(null = True)
     description = models.TextField(null = True)
     course_category = models.ForeignKey(Category, on_delete= models.CASCADE, name = "course_category")
     created_at = models.DateTimeField(auto_now_add=True)
@@ -88,6 +88,9 @@ class Course(models.Model):
 class CourseVideos(models.Model):
     course = models.ForeignKey(Course, on_delete= models.CASCADE)
     video = models.URLField()
+    video_title = models.CharField(max_length= 255)
+    video_description = models.TextField()
+    video_duration = models.DurationField(null = True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

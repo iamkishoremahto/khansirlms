@@ -18,6 +18,7 @@ urlpatterns = [
     path('teacher/<int:pk>',TeacherRetrieveUpdateDelete.as_view(), name='teacher-pk'),
     path('course/',CourseRetrieveCreate.as_view(), name='course'),
     path('course/<int:pk>',CourseRetrieveUpdateDelete.as_view(), name='course-pk'),
+    path('course-video/',CourseVideoCreateRetrieveView.as_view(), name='course-video'),
     path('course-assign/',CourseAssignRetrieveCreate.as_view(), name='course-assign'),
     path('course-assign/<int:pk>',CourseAssignRetrieveUpdateDelete.as_view(), name='course-assign-pk'),
     path('purchased-course/',PurchasedCourseRetrieveCreate.as_view(), name='purchased-course'),
