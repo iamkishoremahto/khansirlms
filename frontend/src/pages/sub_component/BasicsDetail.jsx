@@ -2,6 +2,8 @@
 import React from 'react';
 import InputField from '../../componenets/InputField';
 import Dropdown from '../../componenets/Dropdown';
+import SubmitBtn from '../../componenets/SubmitBtn';
+import UpdateBtn from '../../componenets/UpdateBtn';
 
 function BasicsDetail(props) {
     return (
@@ -12,6 +14,7 @@ function BasicsDetail(props) {
             <Dropdown data={{ label:"Highest Education", options:['10th','12th','Diploma','Graduation','Post Graduation']}}/>
             <InputField data={{ label:'Email address', type:"email", placeholder:"Enter Your Email"}}/>
             <InputField data={{ label:'Phone Number', type:'text', placeholder:'Enter Your Number'}}/>
+            <UpdateBtn/>
         </form>
        </>
     );
