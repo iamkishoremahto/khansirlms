@@ -14,7 +14,7 @@ function DashboardOutlet(props) {
                         <div className=' flex justify-center flex-col gap-6'>
                             <div className='text-white text-xl'>KHAN GLOBAL STUDIES</div>
                             <div className='text-white text-3xl'>Try Our New Dashboard</div>
-                            <div className=' cursor-pointer bg-white text-[#101b8d] text-center w-32 py-2 rounded-[35px]'>Try Now</div>
+                            <div className=' cursor-pointer bg-white text-[#101b8d] hover:text-sky-600 hover:font-medium hover:tracking-[1px] transition-all ease-linear duration-300 text-center w-32 py-2 rounded-[35px]'>Try Now</div>
                         </div>
                         <div>
                             <img src="/images/Online learning-bro.svg" className=' h-96' alt="" />

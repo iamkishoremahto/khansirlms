@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 
+/* eslint-disable react/prop-types */
 
 export default function SubmitBtn({title}) {
   return (

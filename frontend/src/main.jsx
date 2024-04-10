@@ -26,102 +26,119 @@ import Orders from './pages/sub_component/Orders.jsx'
 import MyProfile from './pages/sub_component/MyProfile.jsx'
 import AllCourses from './pages/AllCourses.jsx'
 import AskDoubts from './pages/AskDoubts.jsx'
+import BasicsDetail from './pages/sub_component/BasicsDetail.jsx'
+import Address from './pages/sub_component/Address.jsx'
+import EducationDetail from './pages/sub_component/EducationDetail.jsx'
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element: <Layout/>,
-    children:[
+    path: "/",
+    element: <Layout />,
+    children: [
       {
-        path:"",
-        element:<Home/>
+        path: "",
+        element: <Home />
       },
       {
-        path:"courses/",
-        element:<Courses/>
+        path: "courses/",
+        element: <Courses />
       },
       {
-        path:"test-series/",
-        element:<TestSeries/>
+        path: "test-series/",
+        element: <TestSeries />
       },
       {
-        path:"current-affairs/",
-        element:<CurrentAffairs/>
+        path: "current-affairs/",
+        element: <CurrentAffairs />
       },
       {
-        path:"practice/",
-        element:<Practice/>
+        path: "practice/",
+        element: <Practice />
       },
       {
-        path:"downloads/",
-        element:<Downloads/>
+        path: "downloads/",
+        element: <Downloads />
       },
       {
-        path:"answer-writing/",
-        element:<AnswerWriting/>
+        path: "answer-writing/",
+        element: <AnswerWriting />
       },
       {
-        path:"open-test/",
-        element:<OpenTest/>
+        path: "open-test/",
+        element: <OpenTest />
       },
       {
-        path:"login/",
-        element:<Login/>
+        path: "login/",
+        element: <Login />
       },
       {
-        path:"sign-up/",
-        element:<Register/>
+        path: "sign-up/",
+        element: <Register />
       },
       {
-        path:'forgot-password/',
-        element:<ForgotPassword/>
+        path: 'forgot-password/',
+        element: <ForgotPassword />
       },
       {
-        path:'dashboard/',
-        element:<Dashboard/>,
-        children:[
+        path: 'dashboard/',
+        element: <Dashboard />,
+        children: [
           {
-            path:"",
-            element:<DashboardOutlet />
+            path: "",
+            element: <DashboardOutlet />
           },
           {
-            path:"my-course/",
-            element:<MyCourse />
+            path: "my-course/",
+            element: <MyCourse />
           },
           {
-            path:"my-test-series/",
-            element:<MyTestSeries />
+            path: "my-test-series/",
+            element: <MyTestSeries />
           },
           {
-            path:"live-classes/",
-            element:<LiveClasses />
+            path: "live-classes/",
+            element: <LiveClasses />
           },
           {
-            path:"my-submission/",
-            element:<MySubmission />
+            path: "my-submission/",
+            element: <MySubmission />
           },
           {
-            path:"asked-doubts/",
-            element:<AskedDoubts />
+            path: "asked-doubts/",
+            element: <AskedDoubts />
           },
           {
-            path:"orders/",
-            element:<Orders />
+            path: "orders/",
+            element: <Orders />
           },
           {
-            path:"my-profile/",
-            element:<MyProfile />
+            path: "my-profile/",
+            element: <MyProfile />,
+            children: [
+              {
+                path: "basic-detail/",
+                element: <BasicsDetail/>
+              },
+              {
+                path: "address/",
+                element: <Address/>
+              },
+              {
+                path: "educational-detail/",
+                element: <EducationDetail/>
+              }
+            ]
           }
         ]
 
       },
       {
-        path:"all-courses/",
-        element:<AllCourses/>
+        path: "all-courses/",
+        element: <AllCourses />
       },
       {
-        path:"ask-doubts/",
-        element:<AskDoubts/>
+        path: "ask-doubts/",
+        element: <AskDoubts />
       }
     ]
   }
@@ -129,6 +146,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router = {router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
