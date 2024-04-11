@@ -15,7 +15,7 @@ export default function Breadcrumb(props) {
 
               location.map((link, index) => {
 
-                current_link += link === '' ? '/' : link
+                current_link += link 
 
                 return <div key={index} className="breadcrumbs px-1 ">
 

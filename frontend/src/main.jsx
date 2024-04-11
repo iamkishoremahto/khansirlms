@@ -116,7 +116,7 @@ const router = createBrowserRouter([
             element: <MyProfile />,
             children: [
               {
-                path: "basic-detail/",
+                path: "",
                 element: <BasicsDetail/>
               },
               {
