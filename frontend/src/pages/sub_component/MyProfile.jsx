@@ -2,7 +2,6 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
-
 function MyProfile(props) {
     return (
         <>
@@ -18,7 +17,7 @@ function MyProfile(props) {
                         `${isActive?'before:w-full':'before:w-0'} relative before:content['],  hover:before:w-full before:h-[3px] before:absolute before:bottom-0 before:bg-[#111e92] pb-3 cursor-pointer basics text-[1.2em]  font-medium  before:transition-all before:duration-500"`
                     )}>Education Details</NavLink>
                 </div>
-                <div>
+                <div>                                                                                                                                           
                     <Outlet />
                 </div>
             </div>
