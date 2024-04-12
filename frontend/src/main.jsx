@@ -27,6 +27,7 @@ import MyProfile from './pages/sub_component/MyProfile.jsx'
 import AllCourses from './pages/AllCourses.jsx'
 import AskDoubts from './pages/AskDoubts.jsx'
 
+
 const router = createBrowserRouter([
   {
     path: "/",
