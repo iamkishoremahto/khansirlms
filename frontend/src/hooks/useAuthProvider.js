@@ -5,6 +5,7 @@ export const useAuthProvider = create((set) => ({
     user: {},
     setUser: () => set(() => {
         const accessToken = localStorage.getItem('access_token');
+    
         
         
         

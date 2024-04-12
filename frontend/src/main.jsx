@@ -26,6 +26,9 @@ import Orders from './pages/sub_component/Orders.jsx'
 import MyProfile from './pages/sub_component/MyProfile.jsx'
 import AllCourses from './pages/AllCourses.jsx'
 import AskDoubts from './pages/AskDoubts.jsx'
+import BasicsDetail from './pages/sub_component/BasicsDetail.jsx'
+import Address from './pages/sub_component/Address.jsx'
+import EducationDetail from './pages/sub_component/EducationDetail.jsx'
 
 
 const router = createBrowserRouter([
