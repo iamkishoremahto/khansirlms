@@ -12,7 +12,7 @@ export default function Dashboard() {
         <div className=" flex container">
           <Dashboardnavlinks />
           <div className=" w-full min-h-full">
-          <Outlet />
+            <Outlet />
           </div>
         </div>
       </div>
