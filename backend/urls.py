@@ -23,4 +23,4 @@ urlpatterns = [
     path('course-assign/<int:pk>',CourseAssignRetrieveUpdateDelete.as_view(), name='course-assign-pk'),
     path('purchased-course/',PurchasedCourseRetrieveCreate.as_view(), name='purchased-course'),
     path('purchased-course/<int:pk>',PurchasedCourseRetrieveUpdateDelete.as_view(), name='purchased-course-pk'),
-]
+]   
