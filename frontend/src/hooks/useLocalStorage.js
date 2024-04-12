@@ -3,7 +3,7 @@ export const  useLocalStorage = () =>{
     const setAccessToken = (value) =>{
         try{
             if(value !== undefined && value !== null)
-            window.localStorage.setItem('access_token', JSON.stringify(value));
+            localStorage.setItem('access_token', JSON.stringify(value));
         }
         catch(err){
             console.error(err);
@@ -13,7 +13,7 @@ export const  useLocalStorage = () =>{
     const setRefreshToken = (value) =>{
         try{
             if(value !== undefined && value !== null)
-            window.localStorage.setItem('refresh_token', JSON.stringify(value));
+            localStorage.setItem('refresh_token', JSON.stringify(value));
         }
         catch(err){
             console.error(err);
@@ -22,7 +22,7 @@ export const  useLocalStorage = () =>{
 
     const getAccessToken = () =>{
         try{
-            return window.localStorage.getItem('access_token');
+            return localStorage.getItem('access_token');
         }
         catch(err){
             console.error(err);
@@ -32,7 +32,7 @@ export const  useLocalStorage = () =>{
 
     const getRefreshToken = () =>{
         try{
-            return window.localStorage.getItem('refresh_token');
+            return localStorage.getItem('refresh_token');
         }
         catch(err){
             console.error(err);

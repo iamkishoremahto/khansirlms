@@ -8,45 +8,47 @@ import { useState } from 'react'
 import {Helmet} from 'react-helmet'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { useUser } from '../hooks/useUser'
-import {jwtDecode} from 'jwt-decode';
+import { useAuthProvider } from "../hooks/useAuthProvider";
+
 
 export default function Login() {
     
     const {setAccessToken,setRefreshToken, getAccessToken, getRefreshToken} = useLocalStorage();
-    const { getUser } =useUser();
-    
+    const { user, setUser } = useAuthProvider(state => ({ user: state.user, setUser: state.setUser }));
+
     
     const navigate = useNavigate()
 
     const [fPasswordW, setFPasswordW] = useState('0')
     const [loading,setLoading] = useState(false)
-    const baseUrl = 'http://127.0.0.1:8000/api/'
+    // const baseUrl = 'http://127.0.0.1:8000/api/'
 
     const loginHandler = async (e) =>{
             e.preventDefault()
             const loginForm = new FormData(e.target);
-            const data = Object()
+            const loginData = Object()
             loginForm.forEach((value,key) =>{
-                data[key] = value;
+                loginData[key] = value;
             })
          
         try{
-            const response = await fetch(baseUrl + 'token/',{
+            const response = await fetch(import.meta.env.VITE_BASE_URL + '/token/',{
                 method: 'POST',
                 headers:{
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(loginData)
             })
             const tokens = await response.json()
             setAccessToken(tokens.access)
             setRefreshToken(tokens.refresh)
-            let userData =  getUser()
-            console.log(jwtDecode(getAccessToken()))
             
             if(response.ok) {
+                setUser()
                 navigate('/dashboard')
             }
+
+     
             
        
             

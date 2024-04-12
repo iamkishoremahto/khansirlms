@@ -1,9 +1,14 @@
 import Footer from "../componenets/Footer";
 import Header from "../componenets/Header";
 import {Outlet} from 'react-router-dom'
-
+import { useAuthProvider } from "../hooks/useAuthProvider.js";
+import { useEffect } from 'react';
 
 function Layout(){
+    const user = useAuthProvider(state => state.user);
+    const setUser = useAuthProvider(state => state.setUser);
+
+   
     return(
         <>
             <div className="main">

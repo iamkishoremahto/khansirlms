@@ -27,6 +27,12 @@ import MyProfile from './pages/sub_component/MyProfile.jsx'
 import AllCourses from './pages/AllCourses.jsx'
 import AskDoubts from './pages/AskDoubts.jsx'
 
+
+
+
+
+import ProtectedRoute from './context/ProtectedRoute.jsx'
+
 const router = createBrowserRouter([
   {
     path:"/",
@@ -78,7 +84,11 @@ const router = createBrowserRouter([
       },
       {
         path:'dashboard/',
-        element:<Dashboard/>,
+        element:
+        <ProtectedRoute>
+        <Dashboard/>
+
+        </ProtectedRoute>,
         children:[
           {
             path:"",
@@ -127,8 +137,12 @@ const router = createBrowserRouter([
   }
 ])
 
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+
     <RouterProvider router = {router} />
+
   </React.StrictMode>,
 )

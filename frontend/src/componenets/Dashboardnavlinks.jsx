@@ -2,8 +2,15 @@
 import React from 'react';
 import { BiBroadcast } from "react-icons/bi";
 import { Link } from 'react-router-dom';
+import { useAuthProvider } from '../hooks/useAuthProvider';
 
 function Dashboardnavlinks() {
+    const { user, setUser } = useAuthProvider(state =>({ user:state.user, setUser:state.setUser}));
+    const logoutHandler = () => {
+        localStorage.removeItem("access_token");
+        localStorage.removeItem("refresh_token");
+        setUser();
+    }
     return (
         <>
             <div className=" flex justify-center mb-[50px]">
@@ -20,7 +27,7 @@ function Dashboardnavlinks() {
                         <Link to="/all-courses/" className=" hover:bg-[#101b8d] hover:text-white pl-3 py-3 transition-all ease-in-out duration-500 cursor-pointer"> All Courses</Link>
                         <Link to="/ask-doubts/" className=" hover:bg-[#101b8d] hover:text-white pl-3 py-3 transition-all ease-in-out duration-500 cursor-pointer"> Ask Doubts</Link>
                     </ul>
-                    <div className="logout w-72 border text-center py-2 bg-[#ff221f] text-white rounded-[8px]">Log Out</div>
+                    <div onClick={logoutHandler} className="logout w-72 border text-center py-2 bg-[#ff221f] text-white rounded-[8px]">Log Out</div>
                 </div>
             </div>
         </>
