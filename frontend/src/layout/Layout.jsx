@@ -5,8 +5,15 @@ import { useAuthProvider } from "../hooks/useAuthProvider.js";
 import { useEffect } from 'react';
 
 function Layout(){
-    const user = useAuthProvider(state => state.user);
-    const setUser = useAuthProvider(state => state.setUser);
+    const { setUser } = useAuthProvider(state => ({ user: state.user, setUser: state.setUser }));
+
+    useEffect(() =>{
+        const accessToken = localStorage.getItem('access_token');
+        if(accessToken){
+            setUser();
+        }
+        
+    },[]);
 
    
     return(

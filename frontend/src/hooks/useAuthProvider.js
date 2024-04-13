@@ -1,19 +1,24 @@
-import { create } from 'zustand';
+import create from 'zustand';
 import {jwtDecode} from 'jwt-decode';  
 
-export const useAuthProvider = create((set) => ({
-    user: {},
-    setUser: () => set(() => {
-        const accessToken = localStorage.getItem('access_token');
-    
-        
-        
-        
-        if (accessToken) {
-            const decode = jwtDecode(accessToken)
-            return { user: decode };
-        } else {
-            return { user: {} };
+const initializeUser = () => {
+    const accessToken = localStorage.getItem('access_token');
+    if (accessToken) {
+        try {
+            const decoded = jwtDecode(accessToken);
+            return decoded;
+        } catch (error) {
+            console.error('Failed to decode access token:', error);
+            return {};
         }
-    })
+    }
+    return {};
+};
+
+export const useAuthProvider = create((set) => ({
+    user: initializeUser(), 
+    setUser: () => {
+        const user = initializeUser();
+        set({ user });
+    }
 }));
